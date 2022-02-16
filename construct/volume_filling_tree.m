@@ -1,16 +1,16 @@
 function tree = volume_filling_tree(xmin,xmax,ymin,ymax,zmin,zmax,n_seed)
+%generate a 3D tree using the volume filling algorithm of 
+%﻿Tawhai et al. ﻿Annals of Biomedical Engineering, Vol. 28, pp. 793–802, ﻿2000
+
 %INPUTS
-
-%FOR NOW
-
 % xmin,xmax,ymin,ymax,zmin,zmax : define the bounds to grow the tree within
 % n_seed : number of seedpoints 
 
+
+
+
 %TO BE ADDED AS OPTIONS - JUST DEFINING FOR NOW
-
 stem_pos=[500 500 0];
-
-
 %options for tree growing
 %number of generations to (try and) grow
 n_gen=12;
@@ -18,9 +18,9 @@ n_gen=12;
 branch_distance_ratio=0.5;
 %maximum branching angle
 max_branch_angle=100;
-
+%diameter ratio
 d_ratio = 0.8;
-
+%diameter of the stem
 d_stem = 10;
 
 %stem position
@@ -35,14 +35,14 @@ d_stem = 10;
 %tree in trees toolbox format
 % X, Y, Z : coordinates of the nodes
 % dA : adjacency matrix
-%
+% D: diameter
 %
 %
 %
 %
 
 
-% DO FOR X,Y,Z,dA FIRST - SIMPLEST PARAMETERS!
+
 
 %initialise arrays using the number of seed points 
 %actual size will be smaller but can trim at the end
